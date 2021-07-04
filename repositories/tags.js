@@ -5,7 +5,13 @@ module.exports = {
         return Tag.findAll()
     },
    
-    getTags(offset = 0, limit = 10) { },
+    getTags(offset = 0, limit = 4) { 
+        return Tag.findAndCountAll({
+            where: {},
+            limit:limit,
+            offset:offset
+          })
+    },
     getAdmins() { },
     getAuthors() { },
     getGuests(){ }, 

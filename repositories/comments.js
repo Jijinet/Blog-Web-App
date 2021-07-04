@@ -5,7 +5,13 @@ module.exports = {
         return Comment.findAll()
     },
    
-    getComments(offset = 0, limit = 10) { },
+    getComments(offset = 0, limit = 8) {
+        return Comment.findAndCountAll({
+            where: {},
+            limit:limit,
+            offset:offset
+          })
+     },
     getAdmins() { },
     getAuthors() { },
     getGuests(){ }, 

@@ -5,7 +5,13 @@ module.exports = {
         return User.findAll()
     },
    
-    getUsers(offset = 0, limit = 10) { },
+    getUsers(offset = 0, limit = 5) {
+        return User.findAndCountAll({
+            where: {},
+            limit:limit,
+            offset:offset
+          })
+     },
     getAdmins() { },
     getAuthors() { },
     getGuests(){ }, 
