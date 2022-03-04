@@ -17,12 +17,11 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
-    app.use(paths.auth, require("../routes/auth"));
-    app.use(paths.homepage, require("../routes/homepage"));
-    // Catch all requests that don't match any route
+
+
     app.get("*", (req, res) => {
       res.sendFile(
         path.join(__dirname, "../client/build/index.html")
