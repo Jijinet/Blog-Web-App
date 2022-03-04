@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "./node_modules/.bin/concurrently \"npm run server\" \"npm run client\"",
+    "start": "nodemon ./bin/www",
     "migrate": "sequelize db:drop & sequelize db:create & node ./migrate.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",

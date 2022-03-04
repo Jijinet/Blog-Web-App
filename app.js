@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'build')));
 
-routes() {
+
     app.use(paths.auth, require("../routes/auth"));
     app.use(paths.homepage, require("../routes/homepage"));
     // Catch all requests that don't match any route
@@ -28,7 +28,7 @@ routes() {
         path.join(__dirname, "../client/build/index.html")
       );
     });
-  }
+
 
 
 app.use('/', indexRouter);
