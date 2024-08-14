@@ -10,8 +10,8 @@
 name: 'Dependency review'
 on:
   workflow_dispatch:
-  pull_request:
-    branches: [ "main" ]
+  # pull_request:
+  #   branches: [ "main" ]
 
 # If using a dependency submission action in this workflow this permission will need to be set to:
 #
