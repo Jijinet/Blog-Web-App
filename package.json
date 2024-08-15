@@ -4,26 +4,22 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
-    "migrate": "sequelize db:drop & sequelize db:create & node ./migrate.js",
-    "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm run build --prefix client"
+    "migrate": "sequelize db:drop & sequelize db:create & node ./migrate.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
-    "ejs": "^3.1.10",
-    "express": "~4.19.2",
+    "ejs": "^3.1.6",
+    "express": "~4.16.1",
     "morgan": "~1.9.1",
     "mustache": "^4.2.0",
-    "mysql2": "^3.9.8",
-    "sequelize": "^6.29.0"
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
   },
   "main": "app.js",
   "devDependencies": {
-    "concurrently": "^7.0.0",
     "faker": "^5.5.3",
-    "nodemon": "^3.1.4"
+    "nodemon": "^2.0.7"
   },
   "keywords": [],
   "author": "",
